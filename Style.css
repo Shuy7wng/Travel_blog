@@ -129,11 +129,49 @@ footer {
   color: white;
   margin-top: 50px;
 }
+.gallery {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px 60px;
+  text-align: center;
+}
 
-/* Responsive */
-@media (max-width: 768px) {
-  nav { justify-content: center; } /* ✅ centrata su mobile */
-  nav a, .dropbtn { padding: 10px 14px; font-size: 14px; }
-  article { padding: 20px 15px; }
-  header h1 { font-size: 1.8rem; }
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid figure {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-grid figure:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-grid figcaption {
+  padding: 12px;
+  font-weight: bold;
+  background: #f8f9fa;
+  color: #325f8c;
+  font-size: 1rem;
 }
